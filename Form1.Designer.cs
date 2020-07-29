@@ -32,7 +32,7 @@ namespace FinalProject
         {
             this.components = new System.ComponentModel.Container();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mniReset = new System.Windows.Forms.ToolStripMenuItem();
             this.lvSongs = new System.Windows.Forms.ListView();
             this.hdrName = new System.Windows.Forms.ColumnHeader();
             this.hdrPath = new System.Windows.Forms.ColumnHeader();
@@ -41,7 +41,6 @@ namespace FinalProject
             this.btnBefore = new System.Windows.Forms.Button();
             this.btnFind = new System.Windows.Forms.Button();
             this.lblPlaylist = new System.Windows.Forms.Label();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlPlaylist = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblCurrentAudio = new System.Windows.Forms.Label();
@@ -54,7 +53,7 @@ namespace FinalProject
             // menuStrip
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem2});
+            this.mniReset});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(1041, 24);
@@ -62,11 +61,11 @@ namespace FinalProject
             this.menuStrip.Text = "Menu";
             this.menuStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip_ItemClicked);
             // 
-            // toolStripMenuItem2
+            // mniReset
             // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(47, 20);
-            this.toolStripMenuItem2.Text = "Reset";
+            this.mniReset.Name = "mniReset";
+            this.mniReset.Size = new System.Drawing.Size(47, 20);
+            this.mniReset.Text = "Reset";
             // 
             // lvSongs
             // 
@@ -122,7 +121,7 @@ namespace FinalProject
             // 
             // btnBefore
             // 
-            this.btnBefore.Image = new Bitmap(Properties.Resources.Back, new Size(125, 125));
+            this.btnFind.Image = new Bitmap(Properties.Resources.Back, new Size(125, 125));
             this.btnBefore.Location = new System.Drawing.Point(286, 19);
             this.btnBefore.Name = "btnBefore";
             this.btnBefore.Size = new System.Drawing.Size(140, 140);
@@ -149,12 +148,6 @@ namespace FinalProject
             this.lblPlaylist.Size = new System.Drawing.Size(78, 30);
             this.lblPlaylist.TabIndex = 6;
             this.lblPlaylist.Text = "Playlist";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(87, 20);
-            this.toolStripMenuItem1.Text = "Reset Playlist";
             // 
             // pnlPlaylist
             // 
@@ -198,7 +191,7 @@ namespace FinalProject
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1041, 605);
+            this.ClientSize = new System.Drawing.Size(1041, 548);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlPlaylist);
             this.Controls.Add(this.menuStrip);
@@ -227,10 +220,9 @@ namespace FinalProject
         private System.Windows.Forms.Label lblPlaylist;
         private System.Windows.Forms.ColumnHeader hdrName;
         private System.Windows.Forms.ColumnHeader hdrPath;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.Panel pnlPlaylist;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem mniReset;
         private System.Windows.Forms.Label lblCurrentAudio;
         private System.Windows.Forms.Timer timerMarquee;
     }

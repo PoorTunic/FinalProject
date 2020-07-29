@@ -46,11 +46,7 @@ namespace FinalProject
             {
                 if (playing)
                 {
-                    player.Stop();
-                    playing = false;
-                    currentIndex = 0;
-                    verifyPlayIcon();
-                    lblCurrentAudio.Text = "Press Play to Start !";
+                    stopAudio();
                 }
                 else
                 {
@@ -91,6 +87,15 @@ namespace FinalProject
             verifyPlayIcon();
             lblCurrentAudio.Text = audios.ElementAt<Audio>(playableIndex).Name;
             player.Play();
+        }
+
+        private void stopAudio()
+        {
+            player.Stop();
+            playing = false;
+            currentIndex = 0;
+            verifyPlayIcon();
+            lblCurrentAudio.Text = "Press Play to Start !";
         }
 
         private void verifyPlayIcon()
@@ -140,7 +145,12 @@ namespace FinalProject
 
         private void menuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            Debug.Print("Reset");
+            if (e.ClickedItem.Equals(this.mniReset))
+            {
+                stopAudio();
+                this.audios = new List<Audio>();
+                this.lvSongs.Items.Clear();
+            }
         }
 
         private void timerMarquee_Tick(object sender, EventArgs e)
